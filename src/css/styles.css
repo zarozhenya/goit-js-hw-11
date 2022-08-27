@@ -54,7 +54,9 @@ main {
   padding: 0 10px;
 }
 
-.photo-card {
+.photo-link {
+  text-decoration: none;
+  color: inherit;
   flex-basis: calc(100% / 4 - 20px);
   margin: 10px;
   padding-bottom: 15px;
