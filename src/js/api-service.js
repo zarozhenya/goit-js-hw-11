@@ -9,12 +9,11 @@ export class APIService {
     this.query = '';
     this.step = 40;
   }
-  fetchImages() {
-    return axios
-      .get(
-        `/?key=${KEY}&q=${this.query}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${this.step}&page=${this.page}`
-      )
-      .then(({ data }) => data);
+  async fetchImages() {
+    const { data } = await axios.get(
+      `/?key=${KEY}&q=${this.query}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${this.step}&page=${this.page}`
+    );
+    return data;
   }
   incrementPage() {
     this.page += 1;

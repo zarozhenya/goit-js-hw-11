@@ -65,8 +65,8 @@ const onFormSubmit = async e => {
   currentHits += api.step;
 };
 
-const onButtonClick = e => {
-  loadMore();
+const onButtonClick = async e => {
+  await loadMore();
 
   currentHits += api.step;
   if (currentHits >= totalHits) {
